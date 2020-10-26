@@ -1,0 +1,36 @@
+name: nus-iss-pm
+channels:
+  - defaults
+  - anaconda
+  - conda-forge
+dependencies:
+  - autopep8=1.5.4=py_0
+  - ca-certificates=2020.7.22=0
+  - certifi=2020.6.20=py38_0
+  - click=7.1.2=py_0
+  - flake8=3.8.3=py_0
+  - flask=1.1.2=py_0
+  - flask_cors=3.0.9=pyh9f0ad1d_0
+  - importlib-metadata=1.7.0=py38_0
+  - itsdangerous=1.1.0=py_0
+  - jinja2=2.11.2=py_0
+  - markupsafe=1.1.1=py38he774522_0
+  - mccabe=0.6.1=py38_1
+  - openssl=1.1.1h=he774522_0
+  - pip=20.2.2=py38_0
+  - pycodestyle=2.6.0=py_0
+  - pyflakes=2.2.0=py_0
+  - python=3.8.5=h5fd99cc_1
+  - python-dotenv=0.14.0=pyh9f0ad1d_0
+  - setuptools=49.6.0=py38_0
+  - six=1.15.0=py_0
+  - sqlite=3.33.0=h2a8f88b_0
+  - toml=0.10.1=py_0
+  - vc=14.1=h0510ff6_4
+  - vs2015_runtime=14.16.27012=hf0eaf9b_3
+  - werkzeug=1.0.1=py_0
+  - wheel=0.35.1=py_0
+  - wincertstore=0.2=py38_0
+  - zipp=3.1.0=py_0
+  - zlib=1.2.11=vc14h1cdd9ab_1
+

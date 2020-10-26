@@ -1,0 +1,9 @@
+@use '@material/theme' as theme-variables with (
+    $primary: #6200ee,
+    $secondary: #018786
+);
+
+@use 'balm-ui/components/icon' as icon-variables with (
+    $font-path: 'assets/fonts'
+);
+@use 'balm-ui/dist/balm-ui';
