@@ -17,13 +17,12 @@
   <ui-drawer-backdrop/>
   <ui-top-app-bar fixed content-selector="#content" nav-id="menu">{{ title }}</ui-top-app-bar>
   <div id="content">
-    <router-view/>
+    <router-view v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component"/>
+      </keep-alive>
+    </router-view>
   </div>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/> -->
 </template>
 
 <script>
@@ -38,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss">
-@use './assets/style/_vendor.scss';
+@use './assets/style/vendor';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

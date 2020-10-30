@@ -6,9 +6,13 @@ module.exports = {
         node: true,
         es6: true
     },
+    plugins: [
+        "@typescript-eslint"
+    ],
     extends: [
         'plugin:vue/vue3-essential',
-        'eslint:recommended'
+        'eslint:recommended',
+        "@vue/typescript"
     ],
     rules: {
         'no-console': is_prod ? 'warn' : 'off',
@@ -25,6 +29,7 @@ module.exports = {
         semi: 'error'
     },
     parserOptions: {
+        parser: "@typescript-eslint/parser",
         ecmaFeatures: {
             experimentalObjectRestSpread: true
         },
