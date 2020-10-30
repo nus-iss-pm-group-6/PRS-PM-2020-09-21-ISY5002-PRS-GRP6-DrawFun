@@ -17,4 +17,8 @@ export default class Classifier {
             this._worker.postMessage(sketch);
         });
     }
+
+    reset() {
+        this._worker.postMessage(undefined);
+    }
 }

@@ -17,7 +17,7 @@ import { labels } from '../models';
 export default {
   name: 'DrawBoard',
   components: { CanvasBoard },
-  emits: ['update:predict'],
+  emits: ['update:predict', 'clear'],
   setup(_, { emit }) {
     const board = ref(null);
     const buttons = ref(null);
@@ -64,7 +64,7 @@ export default {
           const xs = sketch.map(t => t[0]), ys = sketch.map(t => t[1]);
           const rx = Math.max(...xs) - Math.min(...xs), ry = Math.max(...ys) - Math.min(...ys);
           const pred = await classifier.predict(sketch.map(([x, y, p]) => [x / rx, y / ry, p]));
-          const argmax = pred.reduce((acc, x, i, arr) => x > arr[acc] && labels[i] + 1 ? i : acc, 0);
+          const argmax = pred.reduce((acc, x, i, arr) => (acc == -1 || x > arr[acc]) && labels[i] + 1 ? i : acc, -1);
           console.log(argmax, labels[argmax]);
           emit('update:predict', labels[argmax]);
         }, 1200);
@@ -74,7 +74,10 @@ export default {
       canvas.addEventListener('mouseout', e => e.buttons && end_path(e));
     });
 
-    return { board, buttons, clear };
+    return {
+      board, buttons,
+      clear: () => clear() || classifier.reset() || emit('clear')
+    };
   }
 };
 </script>
