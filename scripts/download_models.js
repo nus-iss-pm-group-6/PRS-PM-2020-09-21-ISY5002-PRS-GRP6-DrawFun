@@ -6,9 +6,13 @@ const gs = new Storage;
 
 (async () => {
     const bucket = gs.bucket('quickdraw-models');
-    const files = (await bucket.getFiles({
+    let files = (await bucket.getFiles({
         directory: 'sketchRNN/large_models'
     }))[0].filter(file => file.name.endsWith('gen.json'));
+    const names = new Set(files.map(file => path.basename(file.name)));
+    files = files.concat((await bucket.getFiles({
+        directory: 'sketchRNN/models'
+    }))[0].filter(file => file.name.endsWith('gen.json') && !names.has(path.basename(file.name))));
     const bar = new Progress.SingleBar({
         format: 'Downloading models... {bar} | {percentage}% | {eta_formatted} | {value}/{total}'
     }, Progress.Presets.shades_classic);
