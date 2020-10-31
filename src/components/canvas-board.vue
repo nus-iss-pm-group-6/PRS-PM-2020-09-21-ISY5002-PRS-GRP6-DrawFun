@@ -30,6 +30,7 @@ export default {
       ctx.strokeStyle = '#000000';
       ctx.lineWidth = 3;
       ctx.lineCap = 'round';
+      ctx.imageSmoothingEnabled = false;
       ctx.beginPath();
     };
 

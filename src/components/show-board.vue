@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import CanvasBoard from './canvas-board.vue';
 import Generator from '../generator';
 import renderFn from '../render';
@@ -17,13 +17,7 @@ import renderFn from '../render';
 export default {
   name: 'ShowBoard',
   components: { CanvasBoard },
-  props: {
-    model: {
-      type: Number,
-      default: 26
-    }
-  },
-  setup(props) {
+  setup() {
     const board = ref(null);
     const temperature = ref(30);
     const generator = new Generator;
@@ -32,22 +26,17 @@ export default {
       board.value.clear();
       const ctx = board.value.context;
       const canvas = ctx.canvas;
-      let x_min = canvas.width, x_max = 0;
-      let y_min = canvas.height, y_max = 0;
-      generator.start(renderFn(ctx, canvas.width / 2, canvas.height / 2, async (x, y, _) => {
-        await new Promise(requestAnimationFrame);
-        x_min = Math.min(x_min, x), x_max = Math.max(x_max, x);
-        y_min = Math.min(y_min, y), y_max = Math.max(y_max, y);
-        // TODO: ensure all points in canvas
-      }), temperature.value / 100);
+      generator.start(renderFn(
+        ctx, canvas.width / 4, canvas.height / 4, false,
+        async () => await new Promise(requestAnimationFrame)
+      ), temperature.value / 100);
     };
 
-    watch(
-      () => props.model,
-      model => board.value.clear() || generator.load(model) && next()
-    );
-
-    return { board, temperature, generator, next };
+    return {
+      board, temperature, generator, next,
+      clear: async () => (await generator.reset()) || board.value.clear(),
+      loadModel: model => board.value.clear() || generator.load(model) && next()
+    };
   }
 };
 </script>

@@ -2,7 +2,7 @@
   <div class="home">
     <ui-grid class="main-grid">
       <ui-grid-cell :columns="{default: 4, desktop: 6}">
-        <draw-board ref="drawBoard" v-model:predict="model" @clear="showBoard.board.clear()"/>
+        <draw-board ref="drawBoard" v-model:predict="model" @clear="showBoard.clear()"/>
       </ui-grid-cell>
       <ui-grid-cell :columns="{default: 4, desktop: 6}">
         <show-board ref="showBoard" :model="model"/>

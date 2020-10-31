@@ -41,7 +41,8 @@ module.exports = {
                 filename: '[name].worker.js'
             }]);
         config.module
-            .rule('eslint').exclude
+            .rule('eslint')
+            .exclude
             .add(/\.worker\.js$/)
             .add(path.resolve(__dirname, 'src/3rdparty'))
             .end();

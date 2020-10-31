@@ -14,7 +14,7 @@ export default class Generator {
 
     async start(callback, temperature = 0.3) {
         await this._ready;
-        await this._reset();
+        await this.reset();
         const done = (async () => {
             for (; this._point && !this._point[4];) {
                 this._state = this._model.update(this._point, this._state);
@@ -27,7 +27,7 @@ export default class Generator {
         return done;
     }
 
-    async _reset() {
+    async reset() {
         if (!this._point) {
             return;
         }
