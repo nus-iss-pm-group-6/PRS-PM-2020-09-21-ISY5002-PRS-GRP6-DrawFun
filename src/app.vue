@@ -1,21 +1,12 @@
 <template>
-  <ui-drawer type="modal" nav-id="menu">
-    <ui-drawer-header>
-      <ui-drawer-title>{{ title }}</ui-drawer-title>
-    </ui-drawer-header>
-    <ui-drawer-content>
-      <ui-nav>
-        <router-link to="/" custom v-slot="{ href, route, navigate, isActive }">
-          <ui-nav-item @click="navigate" :href="href" :active="isActive">{{ route.name }}</ui-nav-item>
-        </router-link>
-        <router-link to="/about" custom v-slot="{ href, route, navigate, isActive }">
-          <ui-nav-item @click="navigate" :href="href" :active="isActive">{{ route.name }}</ui-nav-item>
-        </router-link>
-      </ui-nav>
-    </ui-drawer-content>
-  </ui-drawer>
-  <ui-drawer-backdrop/>
-  <ui-top-app-bar fixed content-selector="#content" nav-id="menu">{{ title }}</ui-top-app-bar>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0" role="navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand p-0" href="#">
+        <img src="./assets/img/logo.png" width="40" height="40" class="d-inline-block align-top" loading="lazy">
+        <span class="ml-3">{{ title }}</span>
+      </a>
+    </div>
+  </nav>
   <div id="content">
     <router-view v-slot="{ Component }">
       <keep-alive>
@@ -43,25 +34,17 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
-  /* margin-top: 60px; */
 }
 
 #content {
   text-align: center;
 }
 
-/* #nav {
-  padding: 30px;
+.navbar-brand span {
+  font-family: (--mdc-typography-headline6-font-family, var(--mdc-typography-font-family, Roboto), sans-serif);
+  font-size: 36px;
+  font-weight: bolder;
+  font-family: sans-serif;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
 </style>

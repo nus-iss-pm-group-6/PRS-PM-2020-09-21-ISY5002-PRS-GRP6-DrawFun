@@ -1,13 +1,11 @@
 <template>
-  <div class="home">
-    <ui-grid class="main-grid">
-      <ui-grid-cell :columns="{default: 4, desktop: 6}">
-        <draw-board ref="drawBoard" v-model:predict="model" @clear="showBoard.clear()"/>
-      </ui-grid-cell>
-      <ui-grid-cell :columns="{default: 4, desktop: 6}">
-        <show-board ref="showBoard" :model="model"/>
-      </ui-grid-cell>
-    </ui-grid>
+  <div class="home row">
+    <div class="col-lg-6 col-md-4">
+      <draw-board ref="drawBoard" @predict="showBoard.loadModel($event)" @clear="showBoard.clear()"/>
+    </div>
+    <div class="col-lg-6 col-md-4">
+      <show-board ref="showBoard" :model="model" @copy="drawBoard.copy(showBoard.board.canvas, $event)"/>
+    </div>
   </div>
 </template>
 
@@ -32,10 +30,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-grid {
+.home {
   padding: min(2%, 12px) 4%;
   width: 100%;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 100px);
   box-sizing: border-box;
 }
 </style>

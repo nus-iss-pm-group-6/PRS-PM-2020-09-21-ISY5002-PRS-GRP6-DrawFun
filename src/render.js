@@ -3,7 +3,7 @@
  * @param x {number}
  * @param y {number}
  * @param overflow {boolean}
- * @param callback {() => Promise<void>}
+ * @param callback {(rect: DOMRect) => Promise<void>}
  */
 export default (ctx, x, y, overflow = true, callback) => {
     return (() => {
@@ -44,7 +44,7 @@ export default (ctx, x, y, overflow = true, callback) => {
             }
             ctx.moveTo(x + e, y + f);
             prev_pen = pen;
-            callback && await callback();
+            callback && await callback(new DOMRect(x_min, y_min, x_max - x_min, y_max - y_min));
         };
     })();
 };

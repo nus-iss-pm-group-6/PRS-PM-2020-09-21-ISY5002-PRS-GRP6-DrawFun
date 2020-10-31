@@ -1,9 +1,4 @@
-@use '@material/theme' as theme-variables with (
-    $primary: #6200ee,
-    $secondary: #018786
-);
+$form-range-thumb-bg: #000;
+$form-range-thumb-active-bg: #000;
 
-@use 'balm-ui/components/icon' as icon-variables with (
-    $font-path: 'assets/fonts'
-);
-@use 'balm-ui/dist/balm-ui';
+@import '../node_modules/bootstrap/scss/bootstrap';

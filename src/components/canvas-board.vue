@@ -1,13 +1,13 @@
 <template>
-  <ui-card class="canvas-board">
-    <div :class="[$tt('subtitle1'), 'canvas-board-heading']">
+  <div class="card">
+    <div class="card-header px-3 py-2">
       {{ title }}
     </div>
-    <ui-list-divider/>
-    <canvas ref="canvas" :width="width" :height="height"/>
-    <ui-list-divider/>
-    <ui-card-actions class="canvas-board-actions"><slot/></ui-card-actions>
-  </ui-card>
+    <div class="card-body">
+      <canvas ref="canvas" :width="width" :height="height"/>
+    </div>
+    <div class="card-footer"><slot/></div>
+  </div>
 </template>
 
 <script>
@@ -50,29 +50,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/style/color' as color;
-
 canvas {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
 }
 
-.canvas-board {
+.card {
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 
-.canvas-board-heading {
-  color: color.$deep-purple-800;
-  background: color.$grey-100;
-  padding: 8px 16px;
+.card-header {
   text-align: start;
   font-weight: bold;
 }
 
-.canvas-board-actions {
-  min-height: 64px;
+.card-footer {
+  background-color: #ffffff;
 }
 </style>

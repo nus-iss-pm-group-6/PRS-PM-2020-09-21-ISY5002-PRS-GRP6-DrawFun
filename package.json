@@ -12,8 +12,9 @@
   },
   "dependencies": {
     "@tensorflow/tfjs": "^2.7.0",
-    "balm-ui": "^9.0.0-rc.0",
+    "bootstrap": "^5.0.0-alpha2",
     "core-js": "^3.6.5",
+    "popper.js": "^1.16.1",
     "vue": "^3.0.0-0",
     "vue-router": "^4.0.0-rc.1"
   },
