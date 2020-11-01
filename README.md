@@ -1,4 +1,4 @@
-## SECTION 1 : PROJECT TITLE
+## SECTION 1 : DrawFun
 ## DrawFun
 
 ![img-ph](https://picsum.photos/id/137/600/400.jpg)
@@ -6,16 +6,23 @@
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Nam libero justo laoreet sit amet cursus sit amet. In hac habitasse platea dictumst quisque sagittis purus. Neque convallis a cras semper. Aliquam faucibus purus in massa tempor nec. In iaculis nunc sed augue lacus. Diam vel quam elementum pulvinar etiam non quam lacus. Turpis cursus in hac habitasse platea dictumst quisque. Quis hendrerit dolor magna eget. Pellentesque pulvinar pellentesque habitant morbi. Vitae semper quis lectus nulla. Imperdiet dui accumsan sit amet. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Id interdum velit laoreet id donec ultrices tincidunt arcu non.
+Since childhood, human beings have developed the ability to use stroke-based sketch drawings to reconstruct the real world they see from their eyes and to express their nonrepresentational inner feelings. Nowadays, with the development of AI technology, the machine could think and act in daily routines like humans to some extent, as well as in sketch drawings.   
 
-Accumsan tortor posuere ac ut. Sem et tortor consequat id porta. Dolor purus non enim praesent elementum facilisis leo vel. Amet luctus venenatis lectus magna fringilla urna. Ac ut consequat semper viverra nam. Amet tellus cras adipiscing enim eu. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Aliquet lectus proin nibh nisl condimentum id venenatis. Nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque. Sagittis eu volutpat odio facilisis mauris sit.
+  
 
-Maecenas ultricies mi eget mauris pharetra. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Elit duis tristique sollicitudin nibh sit amet. Eget arcu dictum varius duis. Aliquam sem et tortor consequat id porta nibh venenatis cras. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Maecenas ultricies mi eget mauris pharetra. Odio euismod lacinia at quis. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Facilisi etiam dignissim diam quis enim lobortis.
+Our team is comprised of 4 members who enjoy drawing in our daily lives. However, it is embarrassing that we often try to draw a stick figure, such as for a cat, and it turns out to be like a dog absurdly. Due to the fact that without systematic learning, not everyone has the talent to draw like professional painters. So, we hope to build a sketch drawings optimization system to help ordinary people to improve their drawings.  
 
-Adipiscing elit pellentesque habitant morbi. Egestas fringilla phasellus faucibus scelerisque. Faucibus a pellentesque sit amet porttitor eget. Feugiat in ante metus dictum at tempor commodo ullamcorper a. Placerat orci nulla pellentesque dignissim enim sit. Massa massa ultricies mi quis hendrerit dolor. Interdum velit euismod in pellentesque. At auctor urna nunc id. Netus et malesuada fames ac. Amet luctus venenatis lectus magna fringilla urna. Cras semper auctor neque vitae tempus.
+  
 
-Risus ultricies tristique nulla aliquet enim tortor at auctor. Amet nulla facilisi morbi tempus. Viverra suspendisse potenti nullam ac tortor vitae. Cras tincidunt lobortis feugiat vivamus at augue eget arcu. Risus nullam eget felis eget nunc lobortis. Sollicitudin nibh sit amet commodo nulla. Suspendisse faucibus interdum posuere lorem ipsum dolor. Placerat orci nulla pellentesque dignissim enim sit amet. Et malesuada fames ac turpis egestas maecenas pharetra. Sagittis nisl rhoncus mattis rhoncus urna neque. Dui faucibus in ornare quam viverra orci sagittis eu. Pretium quam vulputate dignissim suspendisse. Egestas congue quisque egestas diam in arcu. Interdum velit euismod in pellentesque massa placerat duis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Diam ut venenatis tellus in metus vulputate.
+DrawFUN is such a fun, artistic and playful system. It can help users to continue their incomplete drawings as well as inspiring their artistic imagination. According to the content drawn by the user, the machine will perform artistic creation in the background, so as to randomly, continuously and creatively generate sketches of the same category for the user's preference. In other words, by using the DrawFUN system to draw, users do not have to start from an extremely blank canvas with their own imagination. Instead, the machine is enabled to provide certain creative samples to the users according to what they are drawing for.  
 
+  
+
+Inspired by the image processing techniques imparted to us in lectures, we build the system based on sketch classification and sketch generation. The programming languages we used are JavaScript and Python. Firstly, we develop a webpage to obtain users’ drawing data from an easy-to-use UI. Then, the RNN (LSTM) model is utilized to identify and classify users’ drawing content into more than three hundred categories, and finally the SketchRNN model is used to automatically generate sketches corresponding to the previous classification results.  
+
+  
+
+We appreciate this experience of online collaboration, which requires more leadership, self-discipline and time management compared with usual offline group work. We acknowledge that this project is still immature and there are a number of aspects to be improved, but all of us spare no effort to solve every problem we encountered in the process of learning, and contributed to the final complete of the project.  
 ---
 
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
