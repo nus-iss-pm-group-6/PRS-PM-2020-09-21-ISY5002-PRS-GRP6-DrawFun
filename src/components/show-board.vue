@@ -33,14 +33,18 @@ export default {
     const rect = ref(null);
     const generator = new Generator;
 
-    const next = () => {
+    const next = async () => {
       board.value.clear();
       const ctx = board.value.context;
       const canvas = ctx.canvas;
-      generator.start(renderFn(
-        ctx, canvas.width / 4, canvas.height / 4, false,
-        async m => (rect.value = m) && await new Promise(requestAnimationFrame)
-      ), temperature.value);
+      try {
+        await generator.start(renderFn(
+          ctx, canvas.width / 4, canvas.height / 4, false,
+          async m => (rect.value = m) && await new Promise(requestAnimationFrame)
+        ), temperature.value);
+      } catch {
+        next();
+      }
     };
 
     return {

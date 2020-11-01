@@ -50,6 +50,7 @@ export default {
         canvas.addEventListener('mousemove', on_mousemove);
       };
       const path = (e, pen) => {
+        timer && clearTimeout(timer);
         const p = pos(e);
         const dx = p[0] - x, dy = p[1] - y;
         [x, y] = p;
@@ -71,7 +72,7 @@ export default {
           const argmax = (await pred).reduce((acc, x, i, arr) => (acc == -1 || x > arr[acc]) && labels[i] + 1 ? i : acc, -1);
           console.log(argmax, labels[argmax]);
           emit('predict', labels[argmax]);
-        }, 1200);
+        }, 1000);
       };
       canvas.addEventListener('mousedown', begin_path);
       canvas.addEventListener('mouseup', end_path);
