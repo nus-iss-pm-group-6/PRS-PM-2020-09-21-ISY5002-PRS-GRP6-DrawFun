@@ -1,7 +1,7 @@
 ## SECTION 1 : DrawFun
 ## DrawFun
 
-![img-ph](src/assets/img/logo.png)
+![img-ph](SystemCode/src/assets/img/logo.png)
 
 ---
 
