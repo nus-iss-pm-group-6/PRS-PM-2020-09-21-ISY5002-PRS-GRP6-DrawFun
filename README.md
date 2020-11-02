@@ -70,4 +70,4 @@ We appreciate this experience of online collaboration, which requires more lea
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
 
-[![ProjectReport](ProjectReport/Team 6 fianl report.pdf)
+[ProjectReport](ProjectReport/Team 6 fianl report.pdf)
