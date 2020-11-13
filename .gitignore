@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-/dist
+/SystemCode/dist
 
 # local env files
 .env.local
@@ -22,7 +22,7 @@ pnpm-debug.log*
 *.sw?
 
 # Byte-compiled / optimized / DLL files
-__pycache__/
+/SystemCode/__pycache__/
 *.py[cod]
 *$py.class
 
