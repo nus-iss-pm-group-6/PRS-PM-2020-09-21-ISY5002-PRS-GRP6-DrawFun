@@ -33,7 +33,7 @@ We appreciate this experience of online collaboration, which requires more lea
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-[![DrawFUN](SystemCode/src/assets/img/logo.png)](Video/DrawFUN.mp4 "DrawFUN")
+[![DrawFUN](Miscellaneous/video-thumbnail.png)](https://nus-iss-pm-group-6.github.io/IRS-PM-2020-09-21-ISY5002-PRS-GRP6-DrawFun/DrawFUN.mp4 "DrawFUN")
 
 ---
 
