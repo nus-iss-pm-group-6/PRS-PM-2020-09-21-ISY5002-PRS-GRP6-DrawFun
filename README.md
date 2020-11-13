@@ -1,7 +1,7 @@
 ## SECTION 1 : DrawFun
 ## DrawFun
 
-![img-ph](src/assets/img/logo.png)
+![img-ph](SystemCode/src/assets/img/logo.png)
 
 ---
 
@@ -20,9 +20,10 @@ DrawFUN is such a fun, artistic and playful system. It can help users to conti
 
 Inspired by the image processing techniques imparted to us in lectures, we build the system based on sketch classification and sketch generation. The programming languages we used are JavaScript and Python. Firstly, we develop a webpage to obtain users’ drawing data from an easy-to-use UI. Then, the RNN (LSTM) model is utilized to identify and classify users’ drawing content into more than three hundred categories, and finally the SketchRNN model is used to automatically generate sketches corresponding to the previous classification results. 
 
- 
+
 
 We appreciate this experience of online collaboration, which requires more leadership, self-discipline and time management compared with usual offline group work. We acknowledge that this project is still immature and there are a number of aspects to be improved, but all of us spare no effort to solve every problem we encountered in the process of learning, and contributed to the final complete of the project. 
+
 ---
 
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
@@ -31,15 +32,14 @@ We appreciate this experience of online collaboration, which requires more lea
 | :------------ |:---------------:| :-----| :-----|
 | LIN Ying Lin | A0215298X | As the project designer and planner, I write the final report and the video presentation. I am responsible for the generator module, which using SketchRNN to generate sketch drawings. And I am also contributed to the graphical user interface design. | anitalyl22@gmail.com |
 | SONG Bing Heng | A0215496X | <ol type="a"><li>Data collection (Generated pattern collection)</li><li>Back-end development (Flask frame construction, Back-end data processing)</li><li>Model design and training</li><li>Report</li>| songbingheng17@foxmail.com |
-| XIONG Hui | A0215431U | What I| ArlenaXiong@gmail.com |
-| ZUO Zong Yuan | A0215291L | <ul><li>Design and build a ML model in practical application to solve real-world problems</li><li>Tune a ML model based on its metrics</li><li>Combine what I learnt before with newly obtained knowledges</li><li>Cooperate with my teammates</li></ul>
-| eternalphane@gmail.com |
+| XIONG Hui | A0215431U | <ul><li>a. Project manager</li><li> b. Design and train the classifier model</li><li> c. Web-front development</li><li> d. Report writing</li></ul>| ArlenaXiong@gmail.com |
+| ZUO Zong Yuan | A0215291L | <ul><li>Design and build a ML model in practical application to solve real-world problems</li><li>Tune a ML model based on its metrics</li><li>Combine what I learnt before with newly obtained knowledges</li><li>Cooperate with my teammates</li></ul>| eternalphane@gmail.com |
 
 ---
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-[![DrawFUN](src/assets/img/logo.png)](Video/DrawFUN.mp4 "DrawFUN")
+[![DrawFUN](SystemCode/src/assets/img/logo.png)](Video/DrawFUN.mp4 "DrawFUN")
 
 ---
 
